@@ -14,9 +14,10 @@ import java.nio.charset.StandardCharsets;
 
 public class MyMain {
     private static  final String PROBLEM  =
-            " p cnf 3 2\n" +
-            "1 -3 0\n" +
-            "2 3 -1 0";
+            " p cnf 6 3\n" +
+            "1 -3 7 5 0\n" +
+            "-4 -5 7 2 0\n" +
+            "-2 3 -1 -5 0";
 
 
 

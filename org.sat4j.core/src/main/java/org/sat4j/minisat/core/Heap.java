@@ -30,6 +30,7 @@
 package org.sat4j.minisat.core;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 import org.sat4j.core.VecInt;
 import org.sat4j.minisat.orders.VariableComparator;
@@ -130,7 +131,9 @@ public final class Heap implements Serializable {
     }
 
     public int get(int i) {
+        System.out.println(this.heap );
         int r = this.heap.get(i);
+
         this.heap.set(i, this.heap.last());
         this.indices.set(this.heap.get(i), i);
         this.indices.set(r, 0);

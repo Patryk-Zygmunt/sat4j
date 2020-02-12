@@ -36,20 +36,12 @@ import static org.sat4j.core.LiteralsUtils.var;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.sat4j.core.ConstrGroup;
 import org.sat4j.core.LiteralsUtils;
 import org.sat4j.core.Vec;
@@ -1674,6 +1666,8 @@ public class Solver<D extends DataStructureFactory>
 
     public boolean isSatisfiable(IVecInt assumps, boolean global)
             throws TimeoutException {
+
+
         Lbool status = Lbool.UNDEFINED;
         boolean alreadylaunched = this.conflictCount != null;
         final int howmany = this.voc.nVars();

@@ -231,6 +231,7 @@ public final class Lits implements Serializable, ILits {
     }
 
     public void setLevel(int lit, int l) {
+
         this.level[lit >> 1] = l;
     }
 
