@@ -19,6 +19,17 @@ public class MyMain {
             "-4 -5 7 2 0\n" +
             "-2 3 -1 -5 0";
 
+    private static  final String PROBLEM2  =
+                    " p cnf 3 8\n" +
+                    "1 2 3 0\n" +
+                    "1 2 -3 0\n" +
+                    "1 -2 3 0\n" +
+                    "-1 2 3 0\n" +
+                    "1 -2 -3 0\n" +
+                    "-1 2 -3 0\n" +
+                    "-1 -2 3 0\n" +
+                    "-1 -2 -3 0";
+
 
 
     public static void main(String[] args) {
@@ -27,7 +38,7 @@ public class MyMain {
         Reader reader = new DimacsReader(solver);
         PrintWriter out = new PrintWriter(System.out,true);
         try {
-            InputStream stream = new ByteArrayInputStream(PROBLEM.getBytes(StandardCharsets.UTF_8));
+            InputStream stream = new ByteArrayInputStream(PROBLEM2.getBytes(StandardCharsets.UTF_8));
 
             IProblem problem = reader.parseInstance(stream);
             if (problem.isSatisfiable()) {
