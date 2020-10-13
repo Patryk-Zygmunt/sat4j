@@ -106,7 +106,7 @@ Sat4j is a full featured boolean reasoning library designed to bring state-of-th
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
